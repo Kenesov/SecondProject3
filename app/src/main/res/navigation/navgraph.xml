@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/fragmentMenuTest">
+
+    <fragment
+        android:id="@+id/fragmentMenuTest"
+        tools:layout="@layout/fragment_menu_test"
+        android:name="uz.datalife.secondproject.ui.FragmentMenuTest"
+        android:label="FragmentMenuTest" >
+        <action
+            android:id="@+id/action_fragmentMenuTest_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGame"
+        tools:layout="@layout/fragment_game"
+        android:name="uz.datalife.secondproject.ui.FragmentGame"
+        android:label="FragmentGame" >
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentResalt"
+            app:destination="@id/fragmentResalt" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentResalt"
+        tools:layout="@layout/fragment_resalt"
+        android:name="uz.datalife.secondproject.ui.FragmentResalt"
+        android:label="FragmentResalt" >
+        <action
+            android:id="@+id/action_fragmentResalt_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+</navigation>
